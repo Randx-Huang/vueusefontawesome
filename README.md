@@ -1,24 +1,57 @@
 # vueusefontawesome
 
-## Project setup
-```
-npm install
-```
+載入 Vue - fontawesome 專案
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 效果顯示
 
-### Compiles and minifies for production
-```
-npm run build
-```
+![Effect](public/effect.png)
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 效果內容說明
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* size
+* Fixed width
+* Flip horizontally, vertically, or both
+* spin, pulse
+* Border
+* Pull left or right
+* Power Transforms
+* Masking
+
+#### 額外的載入方式
+
+* 使用html tag i
+    main.js
+
+    ```javascript
+    import { dom } from "@fortawesome/fontawesome-svg-core";
+    dom.watch();
+    ```
+
+    Template
+
+    ```HTML
+    <i class="fas fa-coffee"></i>
+    ```
+
+* 載入多個icon
+  
+    ```javascript
+    import {
+    faAppleAlt,
+    faSpinner,
+    faEdit,
+    faCoffee,
+    faCircle,
+    faCheck
+    } from "@fortawesome/free-solid-svg-icons";
+
+    library.add(
+    faAppleAlt,
+    faApple,
+    faSpinner,
+    faEdit,
+    faCoffee,
+    faCircle,
+    faCheck
+    );
+    ```
